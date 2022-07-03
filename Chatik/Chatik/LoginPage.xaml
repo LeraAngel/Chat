@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Вход"
+             x:Class="Chatik.LoginPage"
+             BackgroundColor="#404040">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Чатик" FontSize="32" HorizontalOptions="Center"  TextColor="#F5800C"/>
+            <Entry x:Name="usernameEntry" Placeholder = "Логин" Margin="25,25,25,0"  TextColor="White"  PlaceholderColor="#F5800C" FontAttributes="Italic"/>
+            <Entry x:Name="passwordEntry" Placeholder = "Пароль" IsPassword ="True" Margin="25,0,25,15"  TextColor="White" PlaceholderColor="#F5800C" FontAttributes="Italic"/>
+            <Grid Margin="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button Text = "Войти" FontSize="18" Grid.Column="0" HorizontalOptions="Center" Clicked="OnButtonLoginClicked"  BackgroundColor="#F5800C" TextColor="White" CornerRadius="20"   FontAttributes="Italic"/>
+                <Button Text = "Новый юзер" FontSize="18" Grid.Column="1" HorizontalOptions="Center" Clicked="OnButtonSignUpClicked" BackgroundColor="#F5800C" TextColor="White" CornerRadius="20"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
